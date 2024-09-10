@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 
 #安装依赖
-RUN pip install --no-cache-dir --default-timeout=100 -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt
 # 清理未使用的缓存和临时文件
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
